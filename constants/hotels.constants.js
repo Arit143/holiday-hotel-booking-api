@@ -1,0 +1,7 @@
+const DEFAULT_PAGE_INDEX = 0;
+const DEFAULT_PAGE_LIMIT = 20;
+
+module.exports = {
+    DEFAULT_PAGE_INDEX,
+    DEFAULT_PAGE_LIMIT
+}

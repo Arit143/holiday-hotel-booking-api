@@ -24,6 +24,7 @@ class HotelsController {
             const builtListings = HotelService.buildList(get(json, 'data.results'), req);
             return res.status(status.OK).send({ message: status['200_MESSAGE'], data: builtListings });
         } catch(err) {
+            console.log(err);
             return res.status(status.INTERNAL_SERVER_ERROR).send({ message: status['500_MESSAGE'], data: err.message });
         }
 

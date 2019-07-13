@@ -4,8 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const expressSanitizer = require('express-sanitizer');
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const hotelsRouter = require('./routes/hotels');
 
 const app = express();
 
@@ -16,7 +15,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressSanitizer());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/hotels', hotelsRouter);
 
 module.exports = app;

@@ -47,7 +47,7 @@ class HotelServices {
         return {
             listings: updatedListing,
             pageTitle,
-            totalRecords: updatedListing.length
+            totalRecords
         }
     }
 

@@ -40,7 +40,8 @@ class HotelServices {
     }
 
     _paginate({ listings, pageTitle, totalRecords }, page, limit) {
-        const getMinIndex = page * limit;
+        const totalListings = listings.length;
+        const getMinIndex = totalListings <= page * limit ? 0 : page * limit;
         const getMaxIndex = (page + 1) * limit;
 
         const updatedListing = filter(listings, (value, index) => index >= getMinIndex && index < getMaxIndex)

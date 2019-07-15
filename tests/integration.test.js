@@ -25,6 +25,14 @@ describe("Get Hotels for a search, sort and pagination", () => {
                 done();
             });
         });
+        it("bedrooms query validation", (done) => {
+            chai.request(app)
+                .get('/hotels?searchTerm=singapore&bedrooms=abc')
+                .end((err, res) => {
+                    chai.expect(res.body.data).to.equal('values for query `bedrooms` is not correct. should be a number')
+                done();
+            });
+        });
         it("limit query validation", (done) => {
             chai.request(app)
                 .get('/hotels?searchTerm=singapore&page=0&limit=abc')

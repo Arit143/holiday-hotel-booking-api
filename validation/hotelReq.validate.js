@@ -14,6 +14,13 @@ module.exports = checkSchema({
         isInt: true,
         toInt: true
     },
+    bedrooms: {
+        in: ['query'],
+        errorMessage: 'values for query `bedrooms` is not correct. should be a number',
+        optional: true,
+        isInt: true,
+        toInt: true
+    },
     limit: {
         in: ['query'],
         errorMessage: 'values for query `limit` is not correct. should be a number',

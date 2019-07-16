@@ -1,5 +1,5 @@
 # holiday-hotel-booking-api
-An UI app to search hotels online
+An API app to search hotels online
 
 ## Authors
 Aritra Ghosh
